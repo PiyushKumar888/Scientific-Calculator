@@ -4,28 +4,27 @@
 #include <string.h>
 
 
-// Mathematical Constants
+
 #define PI 3.141592653589793
 #define E 2.718281828459045
 #define GOLDEN_RATIO 1.618033988749895
 
-// Physics Constants
+ 
 #define G 9.80665              // Gravitational acceleration (m/s²)
 #define SPEED_OF_LIGHT 299792458.0 // Speed of light (m/s)
 #define PLANCK 6.62607015e-34  // Planck's constant (J·s)
 #define BOLTZMANN 1.380649e-23 // Boltzmann constant (J/K)
 #define AVOGADRO 6.02214076e23 // Avogadro's number (mol⁻¹)
 
-// Trigonometric Constants
+ 
 #define SIN_30 0.5
 #define COS_60 0.5
 #define TAN_45 1.0
+ 
+#define DEG_TO_RAD (PI / 180.0) 
+#define RAD_TO_DEG (180.0 / PI)  
 
-// Conversion Factors
-#define DEG_TO_RAD (PI / 180.0) // Degrees to radians
-#define RAD_TO_DEG (180.0 / PI) // Radians to degrees
-
-// Additional Math Constants
+ 
 #define SQRT_2 1.414213562373095
 #define SQRT_3 1.732050807568877
 
@@ -36,7 +35,7 @@ printf("+  : Addition\n");
 printf("-  : Subtraction\n");
 printf("*  : Multiplication\n");
 printf("/  : Division\n");
-printf("%%  : Modulus (Remainder)\n"); // Use %% to escape % in printf
+printf("%%  : Modulus (Remainder)\n");  
 printf("^  : Power (Exponentiation)\n");
 printf("!  : Factorial\n");
 printf("s  : Square\n");
@@ -276,51 +275,51 @@ printf("enter value:");
 scanf("%lf",&value);
 
     switch (choice) {
-        case 1: // Meters to Kilometers
+        case 1: 
             result = value / 1000.0;
             printf("%.2lf meters is %.2lf kilometers\n", value, result);
             break;
-        case 2: // Kilometers to Meters
+        case 2:  
             result = value * 1000.0;
             printf("%.2lf kilometers is %.2lf meters\n", value, result);
             break;
-        case 3: // Centimeters to Meters
+        case 3:  
             result = value / 100.0;
             printf("%.2lf centimeters is %.2lf meters\n", value, result);
             break;
-        case 4: // Meters to Centimeters
+        case 4:  
             result = value * 100.0;
             printf("%.2lf meters is %.2lf centimeters\n", value, result);
             break;
-        case 5: // Inches to Centimeters
+        case 5:  
             result = value * 2.54;
             printf("%.2lf inches is %.2lf centimeters\n", value, result);
             break;
-        case 6: // Centimeters to Inches
+        case 6:  
             result = value / 2.54;
             printf("%.2lf centimeters is %.2lf inches\n", value, result);
             break;
-        case 7: // Feet to Meters
+        case 7:  
             result = value * 0.3048;
             printf("%.2lf feet is %.2lf meters\n", value, result);
             break;
-        case 8: // Meters to Feet
+        case 8:  
             result = value / 0.3048;
             printf("%.2lf meters is %.2lf feet\n", value, result);
             break;
-        case 9: // Yards to Meters
+        case 9:  
             result = value * 0.9144;
             printf("%.2lf yards is %.2lf meters\n", value, result);
             break;
-        case 10: // Meters to Yards
+        case 10:  
             result = value / 0.9144;
             printf("%.2lf meters is %.2lf yards\n", value, result);
             break;
-        case 11: // Miles to Kilometers
+        case 11:  
             result = value * 1.60934;
             printf("%.2lf miles is %.2lf kilometers\n", value, result);
             break;
-        case 12: // Kilometers to Miles
+        case 12:  
             result = value / 1.60934;
             printf("%.2lf kilometers is %.2lf miles\n", value, result);
             break;
@@ -343,13 +342,13 @@ scanf("%lf",&value);
     printf("6 : Trapezoid\n");
     printf("---------------------------------\n");
     
-    // Get user choice
+     
     printf("Enter your choice: ");
     scanf("%d", &shapeChoice);
     
-    // Switch case for various shapes
+     
     switch (shapeChoice) {
-        case 1: {  // Square
+        case 1: {   
             double side;
             printf("Enter the side length of the square: ");
             scanf("%lf", &side);
@@ -357,7 +356,7 @@ scanf("%lf",&value);
             printf("Area of the square: %.2lf\n", area);
             break;
         }
-        case 2: {  // Rectangle
+        case 2: {   
             double length, width;
             printf("Enter the length and width of the rectangle: ");
             scanf("%lf %lf", &length, &width);
@@ -365,15 +364,15 @@ scanf("%lf",&value);
             printf("Area of the rectangle: %.2lf\n", area);
             break;
         }
-        case 3: {  // Circle
+        case 3: {   
             double radius;
             printf("Enter the radius of the circle: ");
             scanf("%lf", &radius);
-            area = PI * radius * radius;  // Using PI constant
+            area = PI * radius * radius;  
             printf("Area of the circle: %.2lf\n", area);
             break;
         }
-        case 4: {  // Triangle
+        case 4: {  
             double base, height;
             printf("Enter the base and height of the triangle: ");
             scanf("%lf %lf", &base, &height);
@@ -381,7 +380,7 @@ scanf("%lf",&value);
             printf("Area of the triangle: %.2lf\n", area);
             break;
         }
-        case 5: {  // Parallelogram
+        case 5: {  
             double base, height;
             printf("Enter the base and height of the parallelogram: ");
             scanf("%lf %lf", &base, &height);
@@ -389,7 +388,7 @@ scanf("%lf",&value);
             printf("Area of the parallelogram: %.2lf\n", area);
             break;
         }
-        case 6: {  // Trapezoid
+        case 6: {   
             double base1, base2, height;
             printf("Enter the lengths of the two bases and the height of the trapezoid: ");
             scanf("%lf %lf %lf", &base1, &base2, &height);
